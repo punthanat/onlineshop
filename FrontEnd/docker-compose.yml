@@ -1,0 +1,14 @@
+version: "3"
+services:
+  frontend:
+    build: .
+    image: frontend
+    build: 
+       context: .
+    ports: 
+      - "8080:80"
+    container_name: frontend
+networks:
+  default:
+    external:
+      name: docker_network

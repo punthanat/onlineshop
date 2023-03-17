@@ -1,0 +1,20 @@
+version: '3'
+services:
+  database:
+   build: .
+   image: 221mysql
+   container_name: 221mysql
+   environment: 
+    MYSQL_DATABASE: int221
+    MYSQL_ROOT_USER: admin
+    MYSQL_ROOT_PASSWORD: admin
+   volumes:
+    - "~/database/data/_data:/var/lib/mysql"
+    - "~/database/data/my.cnf:/etc/my.cnf"
+   ports:
+    - "3306:3306"
+
+networks:
+    default:
+        external:
+            name: docker_network

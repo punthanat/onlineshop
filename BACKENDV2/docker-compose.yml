@@ -1,0 +1,18 @@
+version: "3"
+services:
+  backend:
+    build: .
+    image: backend
+    ports: 
+      - "3000:3000"
+    container_name: backend
+    environment:
+      - MYSQL_DATABASE=int221
+      - MYSQL_USER=admin
+      - MYSQL_ROOT_PASSWORD=admin
+    volumes:
+      - ~/backend_data:/public/product-images
+networks:
+  default:
+    external:
+      name: docker_network

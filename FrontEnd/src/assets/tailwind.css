@@ -1,0 +1,23 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+
+.ulNavBar{
+
+    @apply fixed w-full ;
+  
+  }
+  
+  .liNav{
+  
+   @apply  block text-center text-white px-3 py-3 hover:bg-gray-700 ;
+  
+  }
+
+
+
+
